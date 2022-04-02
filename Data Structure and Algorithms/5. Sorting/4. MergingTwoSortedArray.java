@@ -1,17 +1,27 @@
+// two sorted array a[] and b[]
+// size of a = (m+n) first mth filled with sorted numbers
+// size of b = n
+// merge b[] in a[] final result should also sorted
+
+// two sorted array a[] and b[]
+// size of a = (m+n) first mth filled with sorted numbers
+// size of b = n
+// merge b[] in a[] final result should also sorted
+
 class Solution {
 
-	public void merge(int[] a, int m, int[] b, int n) {
+	public void merge(int[] a1, int m, int[] a2, int n) {
 		int i = m - 1, j = n - 1, k = n + m - 1;
 		while (i >= 0 && j >= 0) {
-			if (a[i] > b[j])
-				a[k--] = a[i--];
+			if (a1[i] > a2[j])
+				a1[k--] = a1[i--];
 			else
-				a[k--] = b[j--];
+				a1[k--] = a2[j--];
 		}
 		while (i >= 0)
-			a[k--] = a[i--];
+			a1[k--] = a1[i--];
 		while (j >= 0)
-			a[k--] = b[j--];
+			a1[k--] = a2[j--];
 	}
 }
 
@@ -24,4 +34,5 @@ public class Test {
 			System.out.print(i + " ");
 	}
 }
+
 
