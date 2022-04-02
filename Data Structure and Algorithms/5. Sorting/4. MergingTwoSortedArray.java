@@ -1,3 +1,8 @@
+// two sorted array a[] and b[]
+// size of a = (m+n) first mth filled with sorted numbers
+// size of b = n
+// merge b[] in a[] final result should also sorted
+
 class Solution {
 
 	public void merge(int[] a, int m, int[] b, int n) {
