@@ -16,20 +16,14 @@ class Solution {
 		}
 	}
 
-	public int[] sortArray(int[] nums) {
-
-		bubbleSort(nums, nums.length);
-		return nums;
-
-	}
 }
 
 
 public class Test {
 	public static void main(String[] args) {
 		int[] a = { 8, 4, 2, 45, -3, 5, -54, 9, 5, 0 };
-		int[] sortedArray = new Solution().sortArray(a);
-		for (int i : sortedArray)
+		new Solution().bubbleSort(a,a.length);
+		for (int i : a)
 			System.out.print(i + " ");
 	}
 }
