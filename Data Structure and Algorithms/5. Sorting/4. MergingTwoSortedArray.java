@@ -33,6 +33,37 @@ public class Test {
 		for (int i : a)
 			System.out.print(i + " ");
 	}
+
+// use below code if two input arrays are given and task in to create new array sum is equal of their size and add elements of both into new array in a sorting order sorted order
+
+//public static int[] merge(int arr1[], int a2[]) {
+//        
+//        int l1 = arr1.length;
+//        int l2 = a2.length;
+//        
+//        int[] a1 = new int[l1+l2];
+//        
+//        int m = l1 , n=l2;
+//        
+//
+//		
+//		for(int i=0;i<l1;i++)
+//			a1[i]=arr1[i];
+//        
+//		int i = m - 1, j = n - 1, k = n + m - 1;
+//		while (i >= 0 && j >= 0) {
+//			if (a1[i] > a2[j])
+//				a1[k--] = a1[i--];
+//			else
+//				a1[k--] = a2[j--];
+//		}
+//		while (i >= 0)
+//			a1[k--] = a1[i--];
+//		while (j >= 0)
+//			a1[k--] = a2[j--];
+//		
+//    	return a1;
+//    }
 }
 
 
