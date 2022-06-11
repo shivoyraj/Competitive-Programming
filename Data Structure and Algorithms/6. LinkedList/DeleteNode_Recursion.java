@@ -19,7 +19,6 @@ class Solution {
 		if (pos == 0) 
 			return head.next;
 		
-		
 		LinkedListNode<Integer> smallHead = deleteNodeRec(head.next, pos - 1);
 		head.next = smallHead;
 		return head;
