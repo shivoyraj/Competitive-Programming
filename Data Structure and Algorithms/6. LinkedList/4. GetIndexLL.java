@@ -28,6 +28,23 @@ class Solution {
         
         return null;
 	}
+
+	public static int indexOfRec(LinkedListNode<Integer> head, int n) {
+		
+		if(head==null)
+			return -1;		
+		
+		if(head.data==n)
+			return 0;		
+		
+		int res =  indexOfRec(head.next,n);
+		
+		if(res==-1)
+			return res;
+		
+		return 1+res;
+		
+	}
     
 }
 
