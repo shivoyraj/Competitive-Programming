@@ -10,53 +10,48 @@ class LinkedListNode<T> {
 }
 
 class Solution {
-	
-	public static LinkedListNode<Integer> skipMdeleteN(LinkedListNode<Integer> head, int M, int N) {
 
-		if (M == 0)
-			return null;
+	public static LinkedListNode<Integer> evenAfterOdd(LinkedListNode<Integer> head) {
 
-		if (N == 0)
+		if (head == null || head.next == null)
 			return head;
 
-		LinkedListNode<Integer> q = head;
+		LinkedListNode<Integer> evenLL = new LinkedListNode<>(0);
+		LinkedListNode<Integer> oddLL = new LinkedListNode<>(0);
+
 		LinkedListNode<Integer> p = head;
+		LinkedListNode<Integer> p1 = oddLL;
+		LinkedListNode<Integer> p2 = evenLL;
 
-		while (q != null) {
-
-			int a = M;
-			int b = N;
-
-			if (q == head)
-				a--;
-
-			while (p != null && a-- > 0)
-				p = p.next;
-
-			q = p;
-			while (q != null && b-- >= 0)
-				q = q.next;
-
-			if (p != null)
-				p.next = q;
-
+		while (p != null) {
+			if (p.data % 2 == 0) {
+				p2.next = p;
+				p2 = p2.next;
+			} else {
+				p1.next = p;
+				p1 = p1.next;
+			}
+			p = p.next;
 		}
-		return head;
+
+		p1.next = evenLL.next;
+		p2.next = null;
+
+		return oddLL.next;
 	}
+
 }
 
 class Test {
 
 	public static void main(String[] args) {
 
-		int[] a = {3,2,0,4};
+		int[] a = { 2, 1, 4, 3, 6, 5, 8, 7, 0, 9 };
 
 		LinkedListNode<Integer> head = createList(a);
 		print(head);
-		
-		head = Solution.skipMdeleteN(head,1,1);
+		head = Solution.evenAfterOdd(head);
 		print(head);
-		
 	}
 
 	public static void print(LinkedListNode<Integer> head) {

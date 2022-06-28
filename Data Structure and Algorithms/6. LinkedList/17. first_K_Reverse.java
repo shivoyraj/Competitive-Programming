@@ -10,38 +10,30 @@ class LinkedListNode<T> {
 }
 
 class Solution {
-	
-	public static LinkedListNode<Integer> skipMdeleteN(LinkedListNode<Integer> head, int M, int N) {
 
-		if (M == 0)
-			return null;
+	public static LinkedListNode<Integer> kReverse(LinkedListNode<Integer> head, int k) {
 
-		if (N == 0)
+		if (k == 0 || k == 1)
 			return head;
 
-		LinkedListNode<Integer> q = head;
-		LinkedListNode<Integer> p = head;
+		LinkedListNode<Integer> current = head;
+		LinkedListNode<Integer> fwd = null;
+		LinkedListNode<Integer> prev = null;
 
-		while (q != null) {
+		int count = 0;
 
-			int a = M;
-			int b = N;
-
-			if (q == head)
-				a--;
-
-			while (p != null && a-- > 0)
-				p = p.next;
-
-			q = p;
-			while (q != null && b-- >= 0)
-				q = q.next;
-
-			if (p != null)
-				p.next = q;
-
+		while (count < k && current != null) {
+			fwd = current.next;
+			current.next = prev;
+			prev = current;
+			current = fwd;
+			count++;
 		}
-		return head;
+
+		if (fwd != null)
+			head.next = kReverse(fwd, k);
+
+		return prev;
 	}
 }
 
@@ -49,14 +41,12 @@ class Test {
 
 	public static void main(String[] args) {
 
-		int[] a = {3,2,0,4};
+		int[] a = { 2, 1, 4, 3, 6, 5, 8, 7, 0, 9, 2 };
 
 		LinkedListNode<Integer> head = createList(a);
 		print(head);
-		
-		head = Solution.skipMdeleteN(head,1,1);
+		head = Solution.kReverse(head,5);
 		print(head);
-		
 	}
 
 	public static void print(LinkedListNode<Integer> head) {
