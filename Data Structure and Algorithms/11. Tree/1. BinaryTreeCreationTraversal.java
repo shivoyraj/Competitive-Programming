@@ -29,7 +29,7 @@ public class Test {
 
 	}
 
-    // it is assumed that intput array is based of completed binary tree
+    // it is assumed that input array is based of completed binary tree
 	public static BinaryTreeNode<Integer> createList(int[] a, int i) {
 
 		if (a.length == 0)
