@@ -51,6 +51,9 @@ public class Test {
 
     public static void levelOrder(BinaryTreeNode<Integer> root) {
 
+		if(root==null)
+			return;
+
 		Queue<BinaryTreeNode<Integer>> queue = new LinkedList<>();
 		queue.add(root);
 		queue.add(new BinaryTreeNode<>(Integer.MAX_VALUE));
