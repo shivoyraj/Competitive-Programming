@@ -12,7 +12,7 @@ class TreeNode {
       }
   }
 
-class Solution {
+  class Solution {
             
 	public static Integer height(TreeNode root) {
 		
@@ -25,11 +25,7 @@ class Solution {
         if(hl==null || hr == null)
             return null;
             
-		if(Math.abs(hr-hl)<=1)
-			return Math.max(hr+1,hl+1);
-        
-        else
-            return null;
+		return (Math.abs(hr-hl)<=1) ? Math.max(hr,hl)+1 : null;
 		
 	}
     
