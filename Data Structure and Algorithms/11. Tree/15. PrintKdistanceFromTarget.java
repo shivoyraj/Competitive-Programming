@@ -14,9 +14,8 @@ class Solution {
 
 	public static void rootToNode(BinaryTreeNode<Integer> root, int k) {
 
-		if (root == null || k < 0) {
+		if (root == null || k < 0)
 			return;
-		}
 
 		if (k == 0) {
 			System.out.println(root.data);
@@ -42,7 +41,6 @@ class Solution {
 
 			if (dl + 1 == k)
 				System.out.println(root.data);
-
 			else
 				rootToNode(root.right, k - dl - 2);
 
@@ -55,7 +53,6 @@ class Solution {
 
 			if (dr + 1 == k)
 				System.out.println(root.data);
-
 			else
 				rootToNode(root.left, k - dr - 2);
 
