@@ -26,20 +26,16 @@ class Solution {
 					break;
 				}
 
-				else {
+				int k1 = i, k2 = j, f1 = 1, f2 = 1;
+				while (k1 < arr.length && arr[++k1] == arr[i])
+					f1++;
 
-					int k1 = i, f1 = 1, f2 = 1;
-					while (k1 < arr.length && arr[++k1] == arr[i])
-						f1++;
+				while (k2 >= 0 && arr[--k2] == arr[j])
+					f2++;
 
-					int k2 = j;
-					while (k2 >= 0 && arr[--k2] == arr[j])
-						f2++;
-
-					c = c + f1 * f2;
-					i = k1;
-					j = k2;
-				}
+				c = c + f1 * f2;
+				i = k1;
+				j = k2;
 			}
 		}
 		return c;
