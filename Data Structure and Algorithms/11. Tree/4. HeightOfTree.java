@@ -32,12 +32,12 @@ public class Test {
 		// if root at i its left child is at 2*i+1 and right child is at 2*i+2
 		int a[] = { 10,20,30,40,50,-1,-1,-1,-1,-1,-1};
 		
-		BinaryTreeNode<Integer> root = createList(a, 0);
+		BinaryTreeNode<Integer> root = createBT(a, 0);
 		
 		System.out.println(Solution.height(root));
 	}
 
-	public static BinaryTreeNode<Integer> createList(int[] a, int i) {
+	public static BinaryTreeNode<Integer> createBT(int[] a, int i) {
 
 		if (a.length == 0)
 			return null;
@@ -49,8 +49,8 @@ public class Test {
 
 		if (i < a.length) {
 			root = new BinaryTreeNode<>(a[i]);
-			root.left = createList(a, 2 * i + 1);
-			root.right = createList(a, 2 * i + 2);
+			root.left = createBT(a, 2 * i + 1);
+			root.right = createBT(a, 2 * i + 2);
 		}
 
 		return root;
