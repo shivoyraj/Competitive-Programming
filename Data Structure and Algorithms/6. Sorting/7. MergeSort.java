@@ -1,8 +1,10 @@
 class Solution {
 	
 	public static void merge(int[] a, int[] a1, int[] a2, int h) {
+		
 		int m = a1.length;
 		int n = a2.length;
+		
 		int i = m - 1, j = n - 1, k = h;
 		while (i >= 0 && j >= 0) {
 			if (a1[i] > a2[j])
@@ -10,6 +12,7 @@ class Solution {
 			else
 				a[k--] = a2[j--];
 		}
+		
 		while (i >= 0)
 			a[k--] = a1[i--];
 		while (j >= 0)
