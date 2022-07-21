@@ -2,7 +2,7 @@ class Solution {
 
 	public static String[] subsequence(String input){
 
-		if(input.length()==1)
+		if(input.length()<=1)
 			return new String[] {input};
 				
 		String[] smallop = subsequence(input.substring(1));
@@ -22,7 +22,7 @@ class Solution {
 }
 
 
-public class Test {
+class Test {
 	public static void main(String[] args) {
 		String[] res = Solution.subsequence("abc");
 		for(String s : res)
