@@ -84,13 +84,13 @@ class Solution3 {
             int res1 = Integer.MAX_VALUE, res2 = Integer.MAX_VALUE, res3 = Integer.MAX_VALUE;
             
             if (i % 2 == 0)
-				res1 = dp[i/2];
-			if (i % 3 == 0)
-				res2 = dp[i/3];
-			res3 = dp[i-1];
+		res1 = dp[i/2];
+ 	    if (i % 3 == 0)
+		res2 = dp[i/3];
+	    res3 = dp[i-1];
 			
             dp[i] = 1+Math.min(res1, Math.min(res2, res3));
         }
         return dp[n];
-	}
+    }
 }
