@@ -52,7 +52,7 @@ class Solution2 {
 }
 
 // dp iterative
-class Solution {
+class Solution3{
 	
 	public static int minCount(int n) {
 		
@@ -81,6 +81,6 @@ class Solution {
 class test {
 
 	public static void main(String[] args) {
-		System.out.println(Solution.minCount(99));
+		System.out.println(Solution3.minCount(99));
 	}
 }
