@@ -68,3 +68,34 @@ class Solution2 {
 
     }
 }
+
+class Solution{
+		
+	public static String findWinner(int n, int x, int y) {
+			
+            boolean[] dp = new boolean[n+1];
+        	dp[1] = true;
+        
+            for(int i=2;i<=n;i++) {
+                
+        		boolean res1 = false, res2 = false, res3 = false;
+        		
+                res1= !dp[i - 1];
+            	
+                if (i - x >= 0)
+                	res2 = !dp[i - x];
+                
+                if (i - y >= 0)
+                	res3 = !dp[i - y];
+            	
+                dp[i] = res1||res2||res3;
+            }
+            
+        	if(dp[n])
+				return "Beerus";
+			else
+				return "Whis";
+        
+	}
+}
+
