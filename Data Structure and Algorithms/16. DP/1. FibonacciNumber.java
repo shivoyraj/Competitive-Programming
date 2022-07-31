@@ -45,7 +45,7 @@ class Solution2{
 // solution using (DP Recursive method) memoization time complexity T(n) = O(n) and AS(n) = O(n) array + O(n) stack space
 class Solution3{
     
-    public int fib(int n) {
+    public static int fib(int n) {
         
         if(n==0 || n==1)
             return n;
@@ -62,7 +62,6 @@ class Solution3{
 }
 
 class test {
-
 	public static void main(String[] args) {
 		System.out.println(Solution3.fib(5));
 	}
