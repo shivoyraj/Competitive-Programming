@@ -72,7 +72,7 @@ class Solution4{
     }
 }
 
-//using formula
+//using formula T(n) = O(1) and AS = O(c)
 class Solution5{
     
     public static int fib(int n) {
