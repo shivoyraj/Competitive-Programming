@@ -65,7 +65,6 @@ class Solution2{
 }
 
 // dp solution
-
 class Solution3 {
 
 	public static int countMinStepsToOne(int n) {
