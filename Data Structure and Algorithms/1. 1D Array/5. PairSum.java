@@ -21,7 +21,7 @@ class Solution {
 			else {
 
 				if (arr[i] == arr[j]) {
-					int n = j - 1 + 1;
+					int n = j - i + 1;
 					c = c + (n * (n - 1)) / 2;
 					break;
 				}

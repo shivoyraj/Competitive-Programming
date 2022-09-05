@@ -38,7 +38,7 @@ class Solution {
 	}
 }
 
-public class test {
+class test {
 	public static void main(String[] args) {
 		
 		String s1 = "code";
