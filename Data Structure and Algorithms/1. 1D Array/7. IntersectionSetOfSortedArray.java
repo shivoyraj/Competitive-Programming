@@ -26,7 +26,7 @@ class Solution {
 	}
 }
 
-public class Test {
+class Test {
 	public static void main(String[] args) {
 		int[] a = { 3, 5, 10, 10, 10, 15, 15, 20 };
 		int[] b = { 5, 10, 10, 15, 30 };

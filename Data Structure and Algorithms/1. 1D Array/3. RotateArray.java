@@ -1,7 +1,7 @@
-class Solution {
+class Solution1 {
 
     public static void rotate(int[] arr, int d) {
-    	//Your code goes here
+
         int n = arr.length;
         
         if (n==0)
@@ -20,12 +20,32 @@ class Solution {
     }
 }
 
-public class test {
+class Solution2 {
+    
+    static void reverse(int arr[] , int i , int j){
+        while(i<j){
+            int tmp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = tmp;
+            i++;
+            j--;
+        }
+    }
+
+    void rotateArr(int arr[], int d, int n){
+        d = d % n;
+        reverse(arr,0,d-1);
+        reverse(arr,d,n-1);
+        reverse(arr,0,n-1);
+    }
+}
+
+class test {
 	public static void main(String[] args) {
 
 		int[] a = { 1,2,3,4,5,6,7,8,9 };
 
-		Solution.rotate(a,6);
+		Solution1.rotate(a,6);
 
 		for (int i : a)
 			System.out.print(i + " ");

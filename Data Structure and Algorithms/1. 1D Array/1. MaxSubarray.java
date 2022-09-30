@@ -16,7 +16,7 @@ class Solution {
 	}
 }
 
-public class test {
+class test {
 	public static void main(String[] args) {
 		
 		int[] a = {7 ,5 ,10, 14, 10, 16, 3 };
